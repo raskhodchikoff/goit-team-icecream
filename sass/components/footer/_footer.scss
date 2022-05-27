@@ -1,0 +1,173 @@
+.footer {
+  background-color: var(--bg-color3);
+}
+
+.footer__box {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
+}
+
+.footer__slogan--part-one {
+  width: 232px;
+  margin-top: 48px;
+
+  font-family: 'Titan One';
+  font-size: 18px;
+  line-height: 1.17;
+  text-transform: uppercase;
+
+  color: var(--title-font-color2);
+
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    margin-top: 40px;
+
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 472px;
+    margin-top: 120px;
+
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.footer__slogan--part-two {
+  width: 200px;
+  margin-top: 16px;
+
+  font-family: 'Titan One';
+  font-size: 34px;
+  line-height: 39px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--title-font-color1);
+
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    margin-top: 12px;
+
+    font-size: 48px;
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 474px;
+    margin-top: 16px;
+
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+
+.footer__list-social {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+
+    @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 128px;
+  }
+}
+
+.footer__link-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  fill: var(--title-font-color2);
+  transition-property: fill;
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-function);
+
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+  }
+
+  &:hover {
+    fill: var(--title-font-color1);
+  }
+
+  &:focus {
+    fill: var(--title-font-color1);
+  }
+}
+
+.footer__contact {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 186%;
+
+  color: var(--paragraph-color1);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+.footer__contact-link {
+  color: var(--accent-font-color);
+}
+
+.footer__border {
+  margin-top: 40px;
+
+  border: 1px solid #e1e1e1;
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 60px;
+  }
+}
+
+.footer__copyright {
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  width: 146px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 152%;
+  text-align: center;
+
+  color: #907e82;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 8px;
+    padding-bottom: 8px;
+    width: auto;
+  }
+}

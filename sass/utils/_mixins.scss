@@ -1,0 +1,59 @@
+// X-Small devices ( <576px - portrait phones)
+@mixin xs {
+  @media (max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+// Small devices ( ≥576px portrait tablets and large phones)
+@mixin s {
+  @media (min-width: $screen-s-min) {
+    @content;
+  }
+}
+
+// Medium devices ( ≥768px landscape tablets)
+@mixin m {
+  @media (min-width: $screen-m-min) {
+    @content;
+  }
+}
+
+// Large devices ( ≥992px small laptops/smaill desktops)
+@mixin l {
+  @media (min-width: $screen-l-min) {
+    @content;
+  }
+}
+
+// Extra large devices ( ≥1200px medium laptops and desktops)
+@mixin xl {
+  @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
+// Extra large devices ( ≥1200px medium laptops and desktops)
+@mixin xxl {
+  @media (min-width: $screen-xxl-min) {
+    @content;
+  }
+}
+
+// Using mixins
+
+// In the following example you can see how to use created mixins in a basic SCSS code:
+
+// .container {
+//   padding: 0 15px;
+//   // 576px window width and more
+//   @include s {
+//     padding: 0 20px;
+//   }
+//   // 992px window width and more
+//   @include l {
+//     margin-left: auto;
+//     margin-right: auto;
+//     max-width: 1100px;
+//   }
+// }

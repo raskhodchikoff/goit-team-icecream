@@ -1,0 +1,28 @@
+.gallery {
+  background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 40%);
+
+  @media screen and (min-width: 768px) {
+    height: 264px;
+
+    background-image: linear-gradient(to bottom, #fff5f6 36.5%, #ffffff 36.5%);
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 430px;
+
+    background-image: linear-gradient(to bottom, #fff5f6 38.8%, #ffffff 38.8%);
+  }
+}
+
+.gallery__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,130 @@
+.header {
+  height: 502px;
+
+  @media screen and (max-width: 1279px) {
+    position: relative;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 416px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 664px;
+  }
+}
+
+/* Флексбокс всего хедера */
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.header-box__logo {
+  margin-top: 8px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 37px;
+  }
+}
+
+.header-box__btn {
+  position: fixed;
+  z-index: 4;
+
+  top: 20px;
+  right: 20px;
+
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header-box__btn.is-open {
+  position: absolute;
+  top: 27px;
+  right: 0;
+
+  width: 20px;
+  height: 14px;
+
+  @media screen and (min-width: 768px) {
+    top: 46px;
+    right: 192px;
+  }
+}
+
+.header-box__btn .header-box__icon-cross {
+  display: none;
+}
+
+.header-box__btn.is-open .header-box__icon-cross {
+  display: block;
+}
+
+.header-box__btn.is-open .header-box__icon-menu {
+  display: none;
+}
+
+.header-box__btn:hover .header-box__icon {
+  cursor: pointer;
+}
+
+.header-box__btn--buy {
+  display: inline-block;
+  margin-top: 32px;
+
+  width: 159px;
+  height: 44px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  align-items: center;
+  text-align: center;
+
+  color: var(--accent-font-color);
+  background-color: var(--btn-color2);
+  border-radius: 22px;
+
+  transition-property: background-color;
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-function);
+
+  &:hover {
+    background-color: var(--btn-hover-color2);
+    cursor: pointer;
+  }
+  &:focus {
+    background-color: var(--btn-hover-color2);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header-box__btn-icon--buy {
+  width: 7px;
+  height: 10px;
+  margin-left: 12px;
+}
