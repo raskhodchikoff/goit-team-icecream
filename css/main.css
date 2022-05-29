@@ -569,6 +569,21 @@ html {
   cursor: pointer;
 }
 
+.header-box__icon-menu {
+  stroke: var(--btn-color2);
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: var(--timing-duration);
+          transition-duration: var(--timing-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+
+.header-box__btn:hover .header-box__icon-menu {
+  cursor: pointer;
+  stroke: var(--btn-color1);
+}
+
 .header-box__btn--buy {
   display: inline-block;
   margin-top: 32px;
@@ -616,6 +631,9 @@ html {
   margin-left: 12px;
 }
 
+.nav__container {
+  z-index: 99;
+}
 @media screen and (max-width: 1279px) {
   .nav__container {
     visibility: hidden;
@@ -866,7 +884,7 @@ html {
 .header-hero__title {
   display: inline-block;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   width: 218px;
   height: 106px;
   left: 20px;
@@ -940,7 +958,7 @@ html {
 
 .header-hero__text {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   color: var(--main-font-color);
   -webkit-animation: show 4s;
           animation: show 4s;
@@ -983,7 +1001,7 @@ html {
 
 .header-hero__link--product {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1047,7 +1065,7 @@ html {
 
 .header-hero__link--how {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2196,21 +2214,23 @@ html {
 }
 
 .reviews__swiper {
-  width: 280x;
-  height: 608px;
+  width: 280px;
+  height: 528px;
+  margin-top: 80px;
   margin-bottom: 48px;
 }
 @media screen and (min-width: 768px) {
   .reviews__swiper {
-    width: 768x;
-    height: 456px;
+    width: 768px;
+    height: 376px;
     margin-bottom: 80px;
   }
 }
 @media screen and (min-width: 1280px) {
   .reviews__swiper {
     width: 1280px;
-    height: 488px;
+    height: 368px;
+    margin-top: 120px;
     margin-bottom: 120px;
   }
 }
@@ -2227,15 +2247,6 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.reviews__slider-item {
-  margin-top: 80px;
-}
-@media screen and (min-width: 1280px) {
-  .reviews__slider-item {
-    margin-top: 120px;
-  }
 }
 
 .reviews__avatar {

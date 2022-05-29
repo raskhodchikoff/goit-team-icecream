@@ -1,4 +1,5 @@
 .nav__container {
+  z-index: 99;
   @media screen and (max-width: 1279px) {
     visibility: hidden;
 
