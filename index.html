@@ -13,6 +13,8 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <!-- Swiper for reviews section -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- ---------------------------------------- Шапка ---------------------------------------- -->
@@ -322,8 +324,67 @@
       </section>
 
       <!-- Customer Reviews -->
-
       <section class="reviews">
+        <div class="container">
+          <h2 class="reviews__title">reviews</h2>
+          <!-- Slider main container Главный контейнер слайдера -->
+          <div class="reviews__swiper swiper">
+            <!-- Additional required wrapper Дополнительная обёртка-->
+            <div class="swiper-wrapper">
+              <!-- Slides Слайды -->
+              <div class="swiper-slide">
+                <article class="reviews__slider-item">
+                  <img class="reviews__avatar" src="./images/customer1.png" alt="customer" />
+                  <div class="reviews__box">
+                    <div class="reviews__text-box">
+                      <p class="reviews__slider-text">
+                        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
+                        sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in
+                        nibh vel risus.
+                      </p>
+                    </div>
+                  </div>
+                  <p class="reviews__location">Emily, Los Angeles</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="reviews__slider-item">
+                  <img class="reviews__avatar" src="./images/customer2.png" alt="customer" />
+                  <div class="reviews__box">
+                    <div class="reviews__text-box">
+                      <p class="reviews__slider-text">
+                        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
+                        sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in
+                        nibh vel risus.
+                      </p>
+                    </div>
+                  </div>
+                  <p class="reviews__location">Bella, NY</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="reviews__slider-item">
+                  <img class="reviews__avatar" src="./images/customer3.png" alt="customer" />
+                  <div class="reviews__box">
+                    <div class="reviews__text-box">
+                      <p class="reviews__slider-text">
+                        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
+                        sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in
+                        nibh vel risus.
+                      </p>
+                    </div>
+                  </div>
+                  <p class="reviews__location">Nicol, Chicago</p>
+                </article>
+              </div>
+            </div>
+            <!-- If we need pagination Пагинация -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="reviews">
         <div class="container">
           <h2 class="reviews__title">reviews</h2>
           <div class="reviews__slider">
@@ -384,7 +445,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Contacts -->
 
@@ -548,6 +609,10 @@
     <script src="./js/modal-rm.js"></script>
     <script src="./js/modal-ol.js"></script>
     <script src="./js/modal-fr.js"></script>
+
+    <!-- SwiperJS for reviews section-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/swiper-script.js"></script>
 
     <!-- функция JavaScript для отображения карты -->
 
