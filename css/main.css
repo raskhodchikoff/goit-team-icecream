@@ -2179,87 +2179,6 @@ html {
 .reviews {
   background-color: var(--bg-color2);
 }
-.reviews *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-  all: unset;
-  display: revert;
-}
-.reviews *,
-.reviews *::before,
-.reviews *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.reviews a,
-.reviews button {
-  cursor: revert;
-}
-.reviews ol,
-.reviews ul,
-.reviews menu {
-  list-style: none;
-}
-.reviews img {
-  max-width: 100%;
-}
-.reviews table {
-  border-collapse: collapse;
-}
-.reviews textarea {
-  white-space: revert;
-}
-.reviews meter {
-  -webkit-appearance: revert;
-  -moz-appearance: revert;
-       appearance: revert;
-}
-.reviews ::-webkit-input-placeholder {
-  color: unset;
-}
-.reviews ::-moz-placeholder {
-  color: unset;
-}
-.reviews :-ms-input-placeholder {
-  color: unset;
-}
-.reviews ::-ms-input-placeholder {
-  color: unset;
-}
-.reviews ::placeholder {
-  color: unset;
-}
-.reviews :where([hidden]) {
-  display: none;
-}
-.reviews :where([contenteditable]) {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
-  overflow-wrap: break-word;
-}
-.reviews :where([draggable=true]) {
-  -webkit-user-drag: element;
-}
-
-.reviews__swiper {
-  width: 280px;
-  height: 528px;
-  margin-top: 80px;
-  margin-bottom: 48px;
-}
-@media screen and (min-width: 768px) {
-  .reviews__swiper {
-    width: 768px;
-    height: 376px;
-    margin-bottom: 80px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .reviews__swiper {
-    width: 1280px;
-    height: 368px;
-    margin-top: 120px;
-    margin-bottom: 120px;
-  }
-}
 
 .reviews__title {
   position: absolute;
@@ -2273,6 +2192,27 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.reviews__slider-list {
+  width: 280px;
+  height: 528px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .reviews__slider-list {
+    width: 720px;
+    height: 376px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews__slider-list {
+    width: 1200px;
+    height: 368px;
+    margin-top: 120px;
+  }
 }
 
 .reviews__avatar {
@@ -2440,24 +2380,94 @@ html {
   }
 }
 
-.reviews__swiper .swiper-pagination {
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 48px !important;
+}
+@media screen and (min-width: 768px) {
+  .slick-dotted.slick-slider {
+    margin-bottom: 80px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .slick-dotted.slick-slider {
+    margin-bottom: 120px !important;
+  }
+}
+
+.reviews__slick-dots {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  bottom: 0;
+  margin-bottom: 120px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
 }
 
-.reviews__swiper .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  margin-right: 14px !important;
-  background-color: #d9d9d9;
+.reviews__slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 9px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.reviews__slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+.reviews__slick-dots li button:hover:before,
+.reviews__slick-dots li button:focus:before {
   opacity: 1;
 }
 
-.reviews__swiper .swiper-pagination-bullet-active {
+.reviews__slick-dots li button:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: block;
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-color: var(--bg-color2);
+  background-image: url(../images/pagination.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reviews__slick-dots li.slick-active button:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: block;
   content: "";
   height: 12px;
   width: 12px;
@@ -2466,11 +2476,6 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 18px);
 }
 
 .contacts {
