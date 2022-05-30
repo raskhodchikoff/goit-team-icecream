@@ -227,13 +227,38 @@
   }
 }
 
+.header-hero__icon--ellipse {
+  position: absolute;
+  width: 284px;
+  height: 344px;
+  right: 0;
+  top: 83px;
+
+  background-image: url(../images/ellipse.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  animation: show 4s;
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
 .header-hero__icon--circle {
   position: absolute;
 
-  width: 346px;
-  height: 344px;
-  left: 36px;
-  top: 83px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   @media screen and (min-width: 768px) {
     width: 335px;
@@ -262,7 +287,6 @@
 
 .header-hero__icon--16 {
   position: absolute;
-  // z-index: -4;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -295,7 +319,6 @@
 
 .header-hero__icon--23 {
   position: absolute;
-  // z-index: -4;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -328,9 +351,8 @@
 
 .header-hero__img--icecream {
   position: absolute;
-  // z-index: -4;
 
-  left: 117px;
+  right: 32px;
   top: 92px;
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -356,7 +378,6 @@
 
 .header-hero__img--milk {
   position: absolute;
-  // z-index: -4;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -385,7 +406,6 @@
 
 .header-hero__img--tasty {
   position: absolute;
-  // z-index: -4;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -414,7 +434,6 @@
 
 .header-hero__img--arrow-right {
   position: absolute;
-  // z-index: -4;
 
   @media screen and (max-width: 767px) {
     display: none;

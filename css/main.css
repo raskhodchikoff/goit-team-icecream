@@ -571,8 +571,8 @@ html {
 
 .header-box__icon-menu {
   stroke: var(--btn-color2);
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: stroke;
+  transition-property: stroke;
   -webkit-transition-duration: var(--timing-duration);
           transition-duration: var(--timing-duration);
   -webkit-transition-timing-function: var(--timing-function);
@@ -1127,14 +1127,41 @@ html {
   }
 }
 
-.header-hero__icon--circle {
+.header-hero__icon--ellipse {
   position: absolute;
-  width: 346px;
+  width: 284px;
   height: 344px;
-  left: 36px;
+  right: 0;
   top: 83px;
+  background-image: url(../images/ellipse.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   -webkit-animation: show 4s;
           animation: show 4s;
+}
+@media screen and (min-width: 768px) {
+  .header-hero__icon--ellipse {
+    display: none;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header-hero__icon--circle {
+  position: absolute;
+  -webkit-animation: show 4s;
+          animation: show 4s;
+}
+@media screen and (max-width: 767px) {
+  .header-hero__icon--circle {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-hero__icon--circle {
@@ -1233,7 +1260,7 @@ html {
 
 .header-hero__img--icecream {
   position: absolute;
-  left: 117px;
+  right: 32px;
   top: 92px;
   -webkit-animation: show 4s;
           animation: show 4s;

@@ -89,7 +89,7 @@
 
 .header-box__icon-menu {
   stroke: var(--btn-color2);
-  transition-property: fill;
+  transition-property: stroke;
   transition-duration: var(--timing-duration);
   transition-timing-function: var(--timing-function);
 }
